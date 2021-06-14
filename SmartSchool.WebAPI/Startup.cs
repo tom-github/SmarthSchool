@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SmartSchool.WebAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 namespace SmartSchool.WebAPI
 {
@@ -30,6 +31,8 @@ namespace SmartSchool.WebAPI
             services.AddDbContext<SmartContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // services.AddSingleton<IRepository,Repository>();
             // services.AddTransient<IRepository,Repository>();
