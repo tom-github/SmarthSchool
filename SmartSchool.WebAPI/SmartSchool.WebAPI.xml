@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartSchool.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Get">
+            <summary>
+            Método responsável por obter uma lista de Alunos
+            </summary>
+        </member>
+        <member name="T:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto">
+            <summary>
+            Classe DTO de Alunos
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.Id">
+            <summary>
+            Identificador �nico do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.Matricula">
+            <summary>
+            N�mero de matr�cula
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.Nome">
+            <summary>
+            Nome do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.DataNasc">
+            <summary>
+            Data de nascimento do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.DataInicio">
+            <summary>
+            Data de in�cio do contrato Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.DataFim">
+            <summary>
+            Data de fim do contrato do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V1.Dtos.AlunoRegistrarDto.Ativo">
+            <summary>
+            Status do Aluno
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.Get">
+            <summary>
+            Método responsável por obter uma lista de Alunos
+            </summary>
+        </member>
+        <member name="T:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto">
+            <summary>
+            Classe DTO de Alunos
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.Id">
+            <summary>
+            Identificador �nico do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.Matricula">
+            <summary>
+            N�mero de matr�cula
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.Nome">
+            <summary>
+            Nome do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.DataNasc">
+            <summary>
+            Data de nascimento do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.DataInicio">
+            <summary>
+            Data de in�cio do contrato Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.DataFim">
+            <summary>
+            Data de fim do contrato do Aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.WebAPI.V2.Dtos.AlunoRegistrarDto.Ativo">
+            <summary>
+            Status do Aluno
+            </summary>
+        </member>
+    </members>
+</doc>

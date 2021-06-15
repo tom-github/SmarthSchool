@@ -4,13 +4,14 @@ using SmartSchool.WebAPI.Models;
 using SmartSchool.WebAPI.Data;
 using AutoMapper;
 using System.Collections.Generic;
-using SmartSchool.WebAPI.Dtos;
+using SmartSchool.WebAPI.V1.Dtos;
 
 
-namespace SmartSchool.WebAPI.Controllers
+namespace SmartSchool.WebAPI.V1.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ProfessorController : ControllerBase
     {
         private readonly IRepository _repo;
@@ -23,11 +24,11 @@ namespace SmartSchool.WebAPI.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("getRegister")]
-        public IActionResult GetRegister()
-        {
-            return Ok(new ProfessorRegistrarDto());
-        }
+        // [HttpGet("getRegister")]
+        // public IActionResult GetRegister()
+        // {
+        //     return Ok(new ProfessorRegistrarDto());
+        // }
 
         [HttpGet]
         public IActionResult Get()
