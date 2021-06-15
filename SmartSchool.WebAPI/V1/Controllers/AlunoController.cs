@@ -4,6 +4,8 @@ using SmartSchool.WebAPI.Data;
 using AutoMapper;
 using System.Collections.Generic;
 using SmartSchool.WebAPI.V1.Dtos;
+using System.Threading.Tasks;
+using SmartSchool.WebAPI.Helpers;
 
 namespace SmartSchool.WebAPI.V1.Controllers
 {
@@ -22,7 +24,7 @@ namespace SmartSchool.WebAPI.V1.Controllers
             _repo = repo;
             _mapper = mapper;
         }
-        
+
         // [HttpGet("getRegister")]
         // public IActionResult GetRegister()
         // {
@@ -33,11 +35,15 @@ namespace SmartSchool.WebAPI.V1.Controllers
         /// Método responsável por obter uma lista de Alunos
         /// </summary>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get([FromQuery] PageParams pageParams)
         {
-            var result = _repo.GetAllAlunos(true);
+            var alunos = await _repo.GetAllAlunosAsync(pageParams, true);
 
-            return Ok(_mapper.Map<IEnumerable<AlunoDto>>(result));
+            var alunoResult = _mapper.Map<IEnumerable<AlunoDto>>(alunos);
+
+            Response.AddPagination(alunos.CurrentPage, alunos.PageSize, alunos.TotalCount, alunos.TotalPages);
+
+            return Ok(alunoResult);
         }
         // [HttpGet("{id:int}")]
         // [HttpGet("{nome}")]
